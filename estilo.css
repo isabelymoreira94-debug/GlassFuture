@@ -1,0 +1,322 @@
+html {
+scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+body {
+font-family: Arial, sans-serif;
+background-color: #f2f2f2;
+color: #222;
+}
+
+.container {
+width: 90%;
+max-width: 1100px;
+margin: auto;
+}
+
+/* CABEÇALHO */
+
+header {
+    background-color: #111;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+/* IMAGEM */
+
+header img {
+width: 500px;
+height: 100px;
+object-fit: contain;
+transition: transform 0.8s;
+}
+
+header img:hover {
+transform: rotateY(360deg) scale(1.15);
+}
+
+/* TÍTULO */
+
+header h1 {
+margin-top: 15px;
+margin-bottom: 20px;
+font-size: 28px;
+}
+
+/* MENU */
+
+nav {
+display: flex;
+justify-content: center;
+gap: 25px;
+}
+
+nav a {
+color: white;
+text-decoration: none;
+padding: 8px 12px;
+}
+
+nav a:hover {
+background-color: #333;
+border-radius: 5px;
+}
+
+/* CONTEÚDO */
+
+main {
+padding: 30px 0;
+}
+
+section {
+background-color: white;
+padding: 25px;
+margin-bottom: 30px;
+display: flex;
+flex-wrap: wrap;
+gap: 20px;
+}
+#cursos {
+    background-color: #440606;
+}
+
+section h2 {
+width: 100%;
+text-align: center;
+margin-bottom: 15px;
+font-size: 28px;
+color: #111;
+}
+
+section p {
+width: 100%;
+max-width: 700px;
+margin: 0 auto;
+text-align: center;
+line-height: 1.6;
+}
+
+/* INÍCIO */
+
+#inicio {
+    display: block;
+    text-align: center;
+    padding: 60px 25px;
+}
+
+#inicio h2 {
+    text-align: center;
+    width: 100%;
+}
+
+#inicio p {
+    width: 100%;
+    max-width: 700px;
+    margin: 15px auto 0;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.botao {
+    display: block;
+    width: fit-content;
+    margin: 25px auto 0;
+    padding: 10px 20px;
+    background-color: #111;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.botao:hover {
+    background-color: #333;
+}
+
+/* CARDS */
+article {
+flex: 1;
+min-width: 250px;
+padding: 25px;
+border: 1px solid #ddd;
+border-radius: 10px;
+background-color: #fafafa;
+text-align: center;
+transition: transform 0.3s, box-shadow 0.3s;
+}
+
+article h3 {
+margin-bottom: 12px;
+font-size: 20px;
+}
+
+article p {
+line-height: 1.6;
+}
+
+article:hover {
+transform: translateY(-8px);
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* SOBRE E CONTATO */
+#sobre,
+#contato {
+    display: block;
+    text-align: center;
+    padding: 40px 25px;
+}
+
+#sobre h2,
+#contato h2 {
+    margin-bottom: 15px;
+}
+
+.link-contato {
+    display: block;
+    width: fit-content;
+    margin: 15px auto 0;
+    color: #222;
+    text-decoration: none;
+}
+
+.link-contato:hover {
+    text-decoration: underline;
+}
+
+/* RODAPÉ */
+footer {
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 30px;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+}
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+.container {
+    width: 95%;
+}
+
+header img {
+    width: 100%;
+    height: auto;
+}
+
+header h1 {
+    font-size: 22px;
+}
+
+nav {
+    flex-direction: column;
+    gap: 10px;
+}
+
+section {
+    display: block;
+}
+
+article {
+    margin-bottom: 20px; 
+}
+}
+.link-contato {
+    display: inline-block;
+    margin-top: 10px;
+    color: #222;
+    text-decoration: none;
+    border: none;
+}
+
+.link-contato:hover {
+    text-decoration: underline;
+}
+
+.pagina-contato {
+    text-align: center;
+    padding: 50px 25px;
+}
+
+.pagina-contato p {
+    margin: 15px auto;
+}
+/* CARROSSEL */
+
+.carrossel {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.carrossel img {
+    width: 300px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    flex-shrink: 0;
+    animation: passar 8s infinite;
+}
+@keyframes passar {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-320px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+
+}
+#cursos {
+    position: relative;
+    overflow: hidden;
+}
+
+.titulo-fundo {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+
+    font-size: 70px;
+    font-weight: bold;
+    color: #fdfbfb;
+    opacity: 0.05;
+
+    z-index: 0;
+}
+
+#cursos h2,
+#cursos .carrossel,
+#cursos article {
+    position: relative;
+    z-index: 1;
+}
+.nome-aluno {
+    position: absolute;
+    right: 25px;
+    top: 25px;
+
+    font-size: 18px;
+    font-family: "Brush Script MT", "Segoe Script", cursive;
+    color: white;
+}
