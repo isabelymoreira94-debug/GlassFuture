@@ -185,9 +185,6 @@ box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     margin: 15px auto 0;
     color: #222;
     text-decoration: none;
-}
-
-.link-contato:hover {
     text-decoration: underline;
 }
 
